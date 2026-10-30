@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bilal FF TopUp — Demo</title>
+<style>
+:root{--bg:#030b17;--panel:#07182b;--line:#07518b;--blue:#079cff;--cyan:#27d7ff;--white:#eef8ff;--muted:#9bb8d0}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 0,#082b50 0,#030b17 48%);color:var(--white);font:15px Arial,sans-serif}header{padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #07518b;background:#020916eF;position:sticky;top:0;z-index:5}.brand{font-weight:900;font-size:22px;font-style:italic;letter-spacing:1px}.brand span{color:var(--cyan)}nav{display:flex;gap:18px}nav a{color:#d9efff;text-decoration:none;font-size:14px}.wrap{max-width:1100px;margin:auto;padding:22px 16px}.hero{border:1px solid var(--line);border-radius:18px;padding:38px 24px;text-align:center;background:linear-gradient(120deg,#06182c,#063d70 60%,#061326);box-shadow:0 0 30px #007bff22}.hero small{color:var(--cyan);letter-spacing:3px;font-weight:bold}.hero h1{font-size:clamp(34px,7vw,64px);margin:12px 0;color:white;text-shadow:0 0 18px #079cff}.hero p{color:#c3e4ff}.tag{display:inline-block;margin:5px;padding:8px 13px;border:1px solid #1679bd;border-radius:20px;color:#c9efff;font-size:12px}.notice{margin:18px 0;padding:12px 14px;border:1px solid #a87824;background:#2b210d;color:#ffe6a8;border-radius:10px;font-size:13px;line-height:1.5}.layout{display:grid;grid-template-columns:1.4fr 1fr;gap:18px;margin-top:20px}.panel{background:linear-gradient(160deg,#081b30,#04101f);border:1px solid var(--line);border-radius:15px;padding:18px}.panel h2{margin:0 0 14px;font-size:21px}.packages{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.pack{border:1px solid #07518b;background:#041326;border-radius:12px;padding:15px;text-align:center;cursor:pointer;transition:.2s}.pack:hover,.pack.selected{border-color:var(--cyan);box-shadow:0 0 15px #079cff55}.diamond{font-size:25px}.pack b{display:block;margin:7px 0}.price{color:var(--cyan);font-weight:bold}.pack button,.submit{margin-top:10px;background:linear-gradient(90deg,#087be8,#05b7ff);border:0;color:white;font-weight:bold;padding:10px 14px;border-radius:8px;width:100%;cursor:pointer}.field{margin:14px 0}.field label{display:block;margin-bottom:7px;color:#c8e8ff;font-size:14px}.field input,.field select{width:100%;padding:13px;background:#020d1a;color:white;border:1px solid #12619a;border-radius:8px;font-size:15px}.summary{padding:12px;background:#031326;border:1px solid #07518b;border-radius:9px;color:#cceaff;line-height:1.8}.submit{font-size:16px;padding:13px}.muted{color:var(--muted);font-size:12px;line-height:1.5}footer{text-align:center;padding:24px;color:#8baac4;border-top:1px solid #07518b;margin-top:25px;font-size:12px}
+@media(max-width:720px){nav{gap:10px}nav a{font-size:12px}.layout{grid-template-columns:1fr}.hero{padding:30px 15px}}@media(max-width:390px){nav a:nth-child(2){display:none}.packages{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="brand">💠 BILAL FF <span>TOPUP</span></div><nav><a href="#home">Home</a><a href="#packages">Top Up</a><a href="#order">How to Buy</a></nav></header>
+<main class="wrap" id="home">
+<section class="hero"><small>YOUR GAMING TOP-UP STORE</small><h1>BILAL FF TOPUP</h1><p>Free Fire Diamond Packages</p><span class="tag">Fast service</span><span class="tag">Clear pricing</span><span class="tag">Customer support</span></section>
+<div class="notice"><b>DEMO WEBSITE:</b> This page is a design preview only. It does not accept payments or deliver diamonds. It is an independent concept and is not affiliated with or endorsed by Garena.</div>
+<div class="layout">
+<section class="panel" id="packages"><h2>💎 Diamond Packages</h2><div class="packages" id="packageList">
+<div class="pack selected" data-name="100 Diamonds" data-price="220"><div class="diamond">💎</div><b>100 Diamonds</b><div class="price">Rs. 220</div><button type="button">Select</button></div>
+<div class="pack" data-name="310 Diamonds" data-price="560"><div class="diamond">💎</div><b>310 Diamonds</b><div class="price">Rs. 560</div><button type="button">Select</button></div>
+<div class="pack" data-name="520 Diamonds" data-price="890"><div class="diamond">💎</div><b>520 Diamonds</b><div class="price">Rs. 890</div><button type="button">Select</button></div>
+<div class="pack" data-name="1060 Diamonds" data-price="1790"><div class="diamond">💎</div><b>1060 Diamonds</b><div class="price">Rs. 1,790</div><button type="button">Select</button></div>
+</div><p class="muted">Prices shown are sample design values, not verified supplier prices.</p></section>
+<section class="panel" id="order"><h2>🛒 Order Preview</h2><form id="orderForm"><div class="field"><label for="player">1. Free Fire Player ID</label><input id="player" inputmode="numeric" placeholder="Enter Player ID" required minlength="5"></div><div class="field"><label for="payment">2. Preferred payment method (demo)</label><select id="payment"><option>JazzCash (demo only)</option><option>Easypaisa (demo only)</option><option>Other (demo only)</option></select></div><div class="field"><label>3. Your selection</label><div class="summary">Package: <b id="chosenName">100 Diamonds</b><br>Demo amount: <b id="chosenPrice">Rs. 220</b></div></div><button class="submit" type="submit">Preview Order</button><p class="muted">No payment will be collected. Do not enter passwords, PINs, or OTPs.</p></form><div id="result" class="notice" hidden></div></section>
+</div></main>
+<footer>© 2026 Bilal FF TopUp — Demo website. Not an official Garena store.</footer>
+<script>
+const packs=[...document.querySelectorAll('.pack')];let chosen=packs[0];function selectPack(p){chosen=p;packs.forEach(x=>x.classList.toggle('selected',x===p));document.getElementById('chosenName').textContent=p.dataset.name;document.getElementById('chosenPrice').textContent='Rs. '+Number(p.dataset.price).toLocaleString('en-PK')}
+packs.forEach(p=>p.addEventListener('click',()=>selectPack(p)));
+document.getElementById('orderForm').addEventListener('submit',e=>{e.preventDefault();const id=document.getElementById('player').value.trim();const method=document.getElementById('payment').value;const r=document.getElementById('result');r.hidden=false;r.textContent='Demo order preview only — Player ID: '+id+' | Package: '+chosen.dataset.name+' | Payment: '+method+'. No payment was made and no diamonds were sent.';});
+</script>
+</body></html>
